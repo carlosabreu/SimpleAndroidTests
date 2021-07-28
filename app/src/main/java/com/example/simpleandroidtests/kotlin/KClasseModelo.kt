@@ -22,4 +22,14 @@ class KClasseModelo {
             callback.done()
         }
     }
+
+    fun callLambdaIfNumberBiggerThan5(number: Int, callback: () -> Unit) {
+        if (number > 5) {
+            callback()
+        }
+    }
+
+    fun processStrings(classeASerMockada: KClasseASerMockada): String? {
+        return classeASerMockada.string + " e processado."
+    }
 }

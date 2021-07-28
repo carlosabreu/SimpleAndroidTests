@@ -20,4 +20,12 @@ public class JClasseModelo {
             callback.done();
         }
     }
+
+    public String processStrings(JClasseASerMockada classeASerMockada) {
+        return classeASerMockada.getString() + " e processado.";
+    }
+
+    public int getNumber() {
+        return JClasseEstatica.getNumber() + 5;
+    }
 }

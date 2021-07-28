@@ -1,5 +1,3 @@
-# MarkDown
-
 # SimpleAndroidTests
 Olá aventureiros. Estou estudando testes automatizados no android e, como a melhor forma de aprender é implementando, resolvi criar esse projeto. 
 
@@ -10,6 +8,7 @@ No projeto, as classes também seguem essa nomenclatura. As classes começam com
 O projeto em si, não faz nada. Ainda está com a tela gerada pelo android.
 
 Para executar os testes no projeto, selecione uma classe de teste, clique com o botão direito e depois e run. Por exemplo run JClasseEstaticaTest.
+
 
 ## Roadmap:
 
@@ -26,6 +25,40 @@ Para executar os testes no projeto, selecione uma classe de teste, clique com o 
     1. Testar retorno de um método estático - Jok, Kok
 
 1. Utilizando o mockito:
+    1. Mockar o resultado de uma chamada - Jok, Kok
     1. Método recebe uma callback e teste verifica se esta foi chamada - Jok, Kok
-    1. Método recebe uma expressao lambda e teste verifca se esta foi chamada - TODO
-    1. Mockar um método estático - TODO
+    1. Método recebe uma expressao lambda e teste verifca se esta foi chamada - Kok*
+    1. Mockar um método estático - Jok**
+
+* Não encontrei uma forma de um método aceitar lambda em java. Pelo que eu entendi, se, em java você recebe uma interface que só tem um método, na chamada você já pode passar como lambda. Com isso o teste iria ficar identico ao teste "Método recebe uma callback e teste verifica se esta foi chamada".
+
+**Consegui com o Java utilizando o PowerMockito. No entanto, gera um warning. No curso da Alura: "Testes no Android: mocks e integrações" a recomendação é evitar métodos estáticos.
+
+## Dificuldades encontradas
+
+1. O exemplo "Método recebe uma expressao lambda e teste verifca se esta foi chamada" costuma dar um erro:
+
+``` 
+org.mockito.exceptions.base.MockitoException: 
+Cannot mock/spy class com.example.simpleandroidtests.kotlin.KClasseModeloTest$deve_chamarExpressaoLambda_QuandoOParametroDeEntradaForMaiorQue5$function$1
+Mockito cannot mock/spy because :
+ - final class
+```
+Para corrigí-lo foi necessário criar o arquivo
+
+```
+app/src/test/resources/mockito-extensions/org.mockito.plugins.MockMaker
+```
+
+E nele inserir o conteúdo:
+```
+mock-maker-inline
+```
+
+Para mais detalhes:
+
+https://blog.mindorks.com/mockito-cannot-mock-in-kotlin
+
+
+## Ambiente
+Para realizar esses testes utilizei o Android Studio Arctic Fox (2020.3.1) com a JRE 11.0.10
