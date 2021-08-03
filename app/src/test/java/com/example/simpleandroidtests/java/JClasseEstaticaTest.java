@@ -1,6 +1,6 @@
 package com.example.simpleandroidtests.java;
 
-import com.example.simpleandroidtests.kotlin.KClasseEstatica;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -9,10 +9,8 @@ import org.powermock.api.mockito.PowerMockito;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
-import static org.junit.Assert.assertEquals;
-
 @RunWith(PowerMockRunner.class)
-@PrepareForTest({JClasseEstatica.class, KClasseEstatica.class})
+@PrepareForTest(JClasseEstatica.class)
 public class JClasseEstaticaTest {
     @Test
     public void deve_RetornarUmNumero_QuandoChamarOMetodoGetNumber() {

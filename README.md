@@ -10,7 +10,7 @@ O projeto em si, não faz nada. Ainda está com a tela gerada pelo android.
 Para executar os testes no projeto, selecione uma classe de teste, clique com o botão direito e depois e run. Por exemplo run JClasseEstaticaTest.
 
 
-## Roadmap:
+## Roadmap com JUnit:
 
 1. Casos simples:
     1. Método de classe retornando uma string fixa - Jok, Kok
@@ -30,9 +30,15 @@ Para executar os testes no projeto, selecione uma classe de teste, clique com o 
     1. Método recebe uma expressao lambda e teste verifca se esta foi chamada - Kok*
     1. Mockar um método estático - Jok**
 
+1. Singleton
+    1. Mockar um método dentro do singleton - Jok, Kok***
+
+
 * Não encontrei uma forma de um método aceitar lambda em java. Pelo que eu entendi, se, em java você recebe uma interface que só tem um método, na chamada você já pode passar como lambda. Com isso o teste iria ficar identico ao teste "Método recebe uma callback e teste verifica se esta foi chamada".
 
 **Consegui com o Java utilizando o PowerMockito. No entanto, gera um warning. No curso da Alura: "Testes no Android: mocks e integrações" a recomendação é evitar métodos estáticos.
+
+*** É possível mockar um método de um singleton, mas apenas em uma determinada instância. Não é possível mockar de modo geral. Veja JSingletonTest.deve_RetornarMock_QuandoChamarOMetodoGetStringMockado
 
 ## Dificuldades encontradas
 
@@ -58,6 +64,14 @@ mock-maker-inline
 Para mais detalhes:
 
 https://blog.mindorks.com/mockito-cannot-mock-in-kotlin
+
+
+## Roadmap com Espresso:
+
+Por ora, para o espresso não vi sentido em fazer tudo para Java e Kotlin. Portanto estou inicialmente fazendo apenas em kotlin.
+
+1. Casos simples:
+    1. Descobrir se uma view está aparecendo na tela.
 
 
 ## Ambiente
