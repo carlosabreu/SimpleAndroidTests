@@ -71,7 +71,8 @@ https://blog.mindorks.com/mockito-cannot-mock-in-kotlin
 Por ora, para o espresso não vi sentido em fazer tudo para Java e Kotlin. Portanto estou inicialmente fazendo apenas em kotlin.
 
 1. Casos simples:
-    1. Descobrir se uma view está aparecendo na tela.
+   1. Descobrir se uma view está aparecendo na tela - Kok
+   1. Matches personalizados
 
 
 ## Ambiente
