@@ -72,7 +72,11 @@ Por ora, para o espresso não vi sentido em fazer tudo para Java e Kotlin. Porta
 
 1. Casos simples:
    1. Descobrir se uma view está aparecendo na tela - Kok
+   1. Executar uma ação em uma view e ver efeitos na tela - Kok
    1. Matches personalizados
+
+
+Dica: Se você está iniciando com o espresso, veja a opção de gravação de um teste espresso. Nela, o próprio android studio grava suas ações e gera o teste pra você (com mais código do que o necessário, mas depois você limpa o que achar que não precisa). Esta opção fica no Android studio > Run > Record Espresso Test.
 
 
 ## Ambiente
